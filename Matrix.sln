@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matrix Classes", "Matrix Classes\Matrix Classes.csproj", "{2782F5B3-FF78-4F37-8899-1E35B4DB2C37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing Matrix Classes", "Testing Matrix Classes\Testing Matrix Classes.csproj", "{ECE94C8D-6E50-4F47-9770-715230C7950D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2782F5B3-FF78-4F37-8899-1E35B4DB2C37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2782F5B3-FF78-4F37-8899-1E35B4DB2C37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2782F5B3-FF78-4F37-8899-1E35B4DB2C37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2782F5B3-FF78-4F37-8899-1E35B4DB2C37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECE94C8D-6E50-4F47-9770-715230C7950D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECE94C8D-6E50-4F47-9770-715230C7950D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECE94C8D-6E50-4F47-9770-715230C7950D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECE94C8D-6E50-4F47-9770-715230C7950D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37971298-FC27-4C34-99E6-137F677D62AC}
+	EndGlobalSection
+EndGlobal

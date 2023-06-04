@@ -11,6 +11,7 @@ namespace Testing_Matrix_Classes
             MatrixBlocky blocky;
             int x, y; string[] s;
 
+            Console.CursorVisible = false;
             int[][] matrix1 = { new int[] { 1, 2, 3, 4 },
                                 new int[] { 5, 6, 7, 8 },
                                 new int[] { 9, 10, 11, 12 }
@@ -19,33 +20,44 @@ namespace Testing_Matrix_Classes
             columnMajor = new MatrixColumnMajor(matrix1, 3, 4);
             blocky = new MatrixBlocky(matrix1, 3, 4);
 
-            Console.Write("Matrix:\n");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Write("\n  Matrix:\n");
+            Console.ForegroundColor = ConsoleColor.Yellow;
             for (int i = 0; i < 3; i++)
             {
+                Console.Write("  ");
                 for (int j = 0; j < 4; j++)
                     Console.Write(matrix1[i][j] + " ");
                 Console.Write("\n");
             }
 
-            Console.Write("\nEnter the coords of the element you want to get (e.g. 2 3): ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Write("\n  Enter the coords of the element you want to get (e.g. 2 3): ");
 
             while (true) // geting input for the desired element in our matrix
             {
                 try
                 {
-                    s = Console.ReadLine().Split(" ");
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.CursorVisible = true;
+                    s = Console.ReadLine()!.Split(" ");
+                    Console.CursorVisible = false;
                     x = Convert.ToInt32(s[0]);
                     y = Convert.ToInt32(s[1]);
-                    Console.Write("\nRow Major: " + rowMajor.getCell(x, y) + "  |  Column Major: " + columnMajor.getCell(x, y) + "  |  Blocky: " + blocky.getCell(x, y));
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write("\n  Row Major: " + rowMajor.getCell(x, y) + "  |  Column Major: " + columnMajor.getCell(x, y) + "  |  Blocky: " + blocky.getCell(x, y) + "\n");
                     break;
                 }
                 catch (Exception)
                 {
-                    Console.Write("Invalid coordinates! Try again: ");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write("  Invalid coordinates! Try again: ");
                 }
             }
 
-            Console.Write("\n_________________________________\n\n");
+            Console.ReadKey(true);
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("  _________________________________\n\n");
 
             int[][] matrix2 = { new int[] { 1, 2, 3, 4, 5, 6, 7, 8 },
                                 new int[] { 9, 10, 11, 12, 13, 14, 15, 16 },
@@ -64,31 +76,42 @@ namespace Testing_Matrix_Classes
             columnMajor = new MatrixColumnMajor(matrix2, 12, 8);
             blocky = new MatrixBlocky(matrix2, 12, 8);
 
-            Console.Write("Matrix:\n");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Write("  Matrix:\n");
+            Console.ForegroundColor = ConsoleColor.Yellow;
             for (int i = 0; i < 12; i++)
             {
+                Console.Write("  ");
                 for (int j = 0; j < 8; j++)
                     Console.Write(matrix2[i][j] + " ");
                 Console.Write("\n");
             }
 
-            Console.Write("\nEnter the coords of the element you want to get (e.g. 2 3): ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Write("\n  Enter the coords of the element you want to get (e.g. 10 5): ");
 
             while (true) // geting input for the desired element in our matrix
             {
                 try
                 {
-                    s = Console.ReadLine().Split(" ");
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.CursorVisible = true;
+                    s = Console.ReadLine()!.Split(" ");
+                    Console.CursorVisible = false;
                     x = Convert.ToInt32(s[0]);
                     y = Convert.ToInt32(s[1]);
-                    Console.Write("\nRow Major: " + rowMajor.getCell(x, y) + "  |  Column Major: " + columnMajor.getCell(x, y) + "  |  Blocky: " + blocky.getCell(x, y) + "\n");
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write("\n  Row Major: " + rowMajor.getCell(x, y) + "  |  Column Major: " + columnMajor.getCell(x, y) + "  |  Blocky: " + blocky.getCell(x, y) + "\n");
                     break;
                 }
                 catch (Exception)
                 {
-                    Console.Write("Invalid coordinates! Try again: ");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write("  Invalid coordinates! Try again: ");
                 }
             }
+            Console.ResetColor();
+            Console.ReadKey(true);
         }
     }
 }
